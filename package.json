@@ -1,0 +1,25 @@
+{
+  "name": "sendmemo_tx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "abi-decoder": "^2.4.0",
+    "axios": "^1.5.0",
+    "buffer": "^6.0.3",
+    "date-fns": "^3.6.0",
+    "dotenv": "^16.3.1",
+    "eth-crypto": "^2.6.0",
+    "ethers": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "@types/node-rsa": "^1.1.4"
+  }
+}

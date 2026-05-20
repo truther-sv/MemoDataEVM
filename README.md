@@ -47,7 +47,7 @@ The script utilizes the `ethers.js` library to interact with the blockchain and 
     SCAN_API_KEY=<your-etherscan-api-key>
     ```
 
-    We use a default public RPC: https://polygon-rpc.com, chain id: 137, and token contract address: 0xc2132D05D31c914a87C6611C10748AEb04B58e8F (Polygon USDT).
+    We use a default public RPC: https://polygon-rpc.com, chain id: 137, and token contract address: 0xc2132D05D31c914a87C6611C10748AEb04B58e8F (Polygon USDT), for Polygon, and https://rpc.plasma.to, chain id: 9745, and token contract address: 0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb (Plasma USDT), for Plasma.
     You can get a free etherscan key and check the chain id in https://etherscan.com
 
 4. **Prepare ABI File**
@@ -74,7 +74,7 @@ getMemoAndSendTransactions(messageOffRamp, amount, recipientEngine);
 - **CPF**: 11 digits without spaces or special characters. Example: `80042387413`
 - **CNPJ**: 14 digits without spaces or special characters. Example: `59456277000176`
 - **Email**: Example: `john@gmail.com`
-- **Refund Address (Optional)**: The address where the refund will be sent if the transaction fails: `0x1234567890123456789012345678901234567890`
+- **Refund Address (Optional)**: The address where the refund will be sent if the transaction fails: Example: `0x123...`
 
 ## Notes
 

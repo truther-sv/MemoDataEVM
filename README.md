@@ -9,7 +9,7 @@ The script utilizes the `ethers.js` library to interact with the blockchain and 
 ## Features
 
 - **Send USDT Transactions**: Execute token transfers with additional memo data.
-- **Custom Memo Data**: Include key, and an optional refund address.
+- **Custom Memo Data**: Include a key, and an optional refund address.
 - **Dynamic Gas Price Calculation**: Fetches current gas prices and adjusts for faster transaction speeds.
 
 ## Requirements
@@ -48,7 +48,7 @@ The script utilizes the `ethers.js` library to interact with the blockchain and 
     ```
 
     We use a default public RPC: https://polygon-rpc.com, chain id: 137, and token contract address: 0xc2132D05D31c914a87C6611C10748AEb04B58e8F (Polygon USDT), for Polygon, and https://rpc.plasma.to, chain id: 9745, and token contract address: 0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb (Plasma USDT), for Plasma.
-    You can get a free etherscan key and check the chain id in https://etherscan.com
+    You can get a free etherscan key and check the chain id on https://etherscan.com
 
 4. **Prepare ABI File**
 
@@ -78,7 +78,7 @@ getMemoAndSendTransactions(messageOffRamp, amount, recipientEngine);
 
 ## Notes
 
-- The memo should be sent encrypted to protect privacy, the code provides a endpoint with a pattern encryption method and to be recognized by our engine.
+- The memo should be sent encrypted to protect privacy, the code provides an endpoint with a pattern encryption method and so it can be recognized by our engine.
 - The optional Refund Address parameter can be used to specify where funds should be returned if the transaction cannot be processed.
 
 ## License

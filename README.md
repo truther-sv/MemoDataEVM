@@ -9,7 +9,7 @@ The script utilizes the `ethers.js` library to interact with the blockchain and 
 ## Features
 
 - **Send USDT Transactions**: Execute token transfers with additional memo data.
-- **Custom Memo Data**: Include a key, and an optional refund address.
+- **Custom Memo Data**: Include a key, an optional refund address and na optional fee profile.
 - **Dynamic Gas Price Calculation**: Fetches current gas prices and adjusts for faster transaction speeds.
 
 ## Requirements
@@ -59,13 +59,12 @@ The script utilizes the `ethers.js` library to interact with the blockchain and 
 Edit the `messageOffRamp` and `amount` variables in the script to specify the memo data and transaction amount:
 
 ```javascript
-const messageOffRamp = "<your--key>|refund:<refund--address>";
+const messageOffRamp = "<your--key>|refund:<refund--address>|fpro:<fee--profile>";
 
 const amount = "<transaction-amount-in-ether>";
 
 getMemoAndSendTransactions(messageOffRamp, amount, recipientEngine);
 ```
-
 
 ## Memo Data Format
 
@@ -75,11 +74,13 @@ getMemoAndSendTransactions(messageOffRamp, amount, recipientEngine);
 - **CNPJ**: 14 digits without spaces or special characters. Example: `59456277000176`
 - **Email**: Example: `john@gmail.com`
 - **Refund Address (Optional)**: The address where the refund will be sent if the transaction fails: Example: `0x123...`
+- **Fee Profile (Optional)**: The specific fee profile to be used for this transaction, when not informed the default one will be used.
 
 ## Notes
 
 - The memo should be sent encrypted to protect privacy, the code provides an endpoint with a pattern encryption method and so it can be recognized by our engine.
 - The optional Refund Address parameter can be used to specify where funds should be returned if the transaction cannot be processed.
+- The Fee Profile parameter should be used to specify the desired profile instead of the default one.
 
 ## License
 

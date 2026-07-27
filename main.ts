@@ -85,7 +85,7 @@ async function getMemoAndSendTransactions(message: string, amountInEther: string
 
 // Get from form and send:
 
-const messageOffRamp = "<your--key>|refund:<refund--address>";
+const messageOffRamp = "<your--key>|refund:<refund--address>|fpro:<fee--profile>";
 
 const amount = "<transaction-amount-in-ether>";
 

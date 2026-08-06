@@ -36,7 +36,7 @@ async function getMemoAndSendTransactions(message: string, amountInEther: string
         }
 
         const dataField = ethers.utils.hexlify(
-            ethers.utils.toUtf8Bytes(`MEMO:${encrypted?.data}`)
+            ethers.utils.toUtf8Bytes(`MEMO:${encrypted?.data};`)
         );
 
         const amount = ethers.utils.parseUnits(String(amountInEther), Number(6));
